@@ -1,0 +1,109 @@
+/*
+カスタマイズ用のCSS
+*/
+
+/* bootstrapのカスタマイズ
+------------------------------------------------------- */
+
+/* トップページのアイキャッチ */
+.eyecatch,
+.bg-image {
+  height: calc(100vh - 40px);
+}
+.eyecatch {
+  margin-top: -154px;
+}
+.bg-image {
+  z-index: 0;
+  position: absolute;
+  opacity: 0.4;
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  background-size: auto 150%;
+  background-position: center;
+  transform: translate3d(0,0,0);
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
+  filter: blur(40px);
+}
+.bg-image.pageout {
+  transform: scale(1.0);
+  opacity: 1.0;
+  filter: blur(0);
+}
+@media screen and (max-width: 768px) {
+  .bg-image {
+    background-size: auto 110%;
+  }
+}
+/* ロゴアニメーションの位置調整 */
+.logo-animation {
+  position: absolute;
+  top: calc(50vh - 120px);
+}
+
+/* ヘッダー */
+#header {
+  position: relative;
+  z-index: 10;
+}
+
+/* ナビゲーションバー */
+.navbar-dark .navbar-toggler {
+  color: rgba(255,255,255,.9);
+  border-color: rgba(255,255,255,.9);
+}
+.collapse {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 282px;
+  margin: auto;
+}
+
+/* カードリスト　小 */
+.card-list-small .row {
+  margin-top: -3rem;
+}
+
+/* カードリスト　カラム */
+.card-list-columns .card {
+  border-radius: 0.65rem;
+}
+.card-list-columns .card .card-img-top {
+  border-radius: 1.25rem;
+}
+
+/* Wordspressのスタイル
+------------------------------------------------------- */
+
+/* post thumbnail */
+.wp-caption-text {
+  margin: 0.25rem 0;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+/* 使い回し用のスタイル
+------------------------------------------------------- */
+
+/* リンクホバーの下線有無 */
+.hover-underline-none:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+.hover-underline:hover {
+  text-decoration: underline;
+}
+/* ボックスシャドウ */
+.box-shadow {
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+}
+/* テキストシャドウ */
+.text-shadow {
+  text-shadow: 0 0.05rem 0.75rem rgba(0, 0, 0, .05);
+}
